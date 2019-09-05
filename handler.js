@@ -1,9 +1,9 @@
 const {
   FetchCambridge,
-} = require("./lib/cambridge");
+} = require('./lib/cambridge');
 const {
   FetchDictionaryCom,
-} = require("./lib/dictionary_com");
+} = require('./lib/dictionary_com');
 const cache = require('./lib/cache');
 const diagnostic = require("./lib/diagnostic");
 
@@ -19,7 +19,6 @@ async function platformReplyText(context, message) {
 
 
 const handler = async context => {
-
   const greetingMsg = "Hi, this is Vocabulary Titan.\n" +
     "Please enter a word to start to search.\n\n" +
     "Engineer: 劉安齊 Liu, An-Chi\n" +
