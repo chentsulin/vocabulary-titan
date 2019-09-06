@@ -40,11 +40,23 @@ Hit rate: ${diagnostic.hitRate}`;
     return replyText(report);
 }
 
+function HintEnterNewWord() {
+  return replyText('Please enter new word.');
+}
+
 function HandleNumber(context) {
+  const {
+    text
+  } = context.event.message;
+
+  if (!context.state.word) {
+    return HintEnterNewWord;
+  }
+
   const data = cache.get(context.state.word);
 
-  if (context.state.word == '' || data === undefined) {
-    return replyText('Please enter new word.');
+  if (!data) {
+    return HintEnterNewWord;
   } 
 
   switch (text) {

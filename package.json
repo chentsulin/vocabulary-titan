@@ -2,7 +2,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.18.2",
-    "bottender": "^1.0.0-alpha.5",
+    "bottender": "^1.0.0-alpha.6",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.16.0",
     "lru-cache": "^5.1.1"
